@@ -27,7 +27,7 @@ $(NAME) : $(OBJ)
 %.o : %.c
 	$(CC) $(FLAG) -c $< -o $@ -I $(INCLUDE)
 
-all : $(NAME)
+all : $(NAME) bonus
 
 clean :
 	rm -f $(OBJ) $(BONUS_OBJS) libft.so
@@ -37,9 +37,9 @@ fclean : clean
 
 re : fclean all
 
+bonus:			$(OBJ) $(BONUS_OBJS)
+				ar -rcs $(NAME) $(OBJ) $(BONUS_OBJS)
+
 #so	:
 #		$(CC) -nostartfiles -fPIC $(FLAG) $(SOURCES)
 #		gcc -nostartfiles -shared -o libft.so $(OBJ) $(BONUS)
-
-bonus:			$(OBJ) $(BONUS_OBJS)
-				ar -rcs $(NAME) $(OBJ) $(BONUS_OBJS)

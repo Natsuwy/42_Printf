@@ -12,7 +12,7 @@ SOURCES = ft_char.c ft_deci.c ft_inter.c ft_lohex.c \
 OBJ = $(SOURCES:.c=.o)
 
 $(NAME) : $(OBJ)
-	make -C libft/
+	make bonus -C libft/
 	cp libft/libft.a libftprintf.a
 	ar -rcs $(NAME) ${OBJ}
 
@@ -23,9 +23,11 @@ all : $(NAME)
 
 clean :
 	make clean -C libft/
-	rm -f $(OBJ)
+	rm -f $(OBJ) a.out
 
 fclean : clean
+	make fclean -C libft/
 	rm -f $(NAME)
 
 re : fclean all
+	make re -C libft/

@@ -6,8 +6,28 @@
 /*   By: michen <michen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 22:05:37 by michen            #+#    #+#             */
-/*   Updated: 2023/12/08 14:25:18 by michen           ###   ########.fr       */
+/*   Updated: 2023/12/14 17:14:29 by michen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+int	ft_lohex(int n, int numberofprint)
+{
+	int		i;
+	char	*hex;
+	char	*str;
+
+	i = 0;
+	hex = "0123456789abcdef";
+	while (n > 16)
+	{
+		if (n > 16)
+		{
+			str[i] = n / 16;
+			n = n % 16;
+			i++;
+		}
+	}
+	return ()
+}

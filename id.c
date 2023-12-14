@@ -6,7 +6,7 @@
 /*   By: michen <michen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 20:02:01 by michen            #+#    #+#             */
-/*   Updated: 2023/12/11 22:39:13 by michen           ###   ########.fr       */
+/*   Updated: 2023/12/13 17:11:25 by michen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ static int	ft_idbis(char c, va_list arg)
 	}
 	if (c == 'x')
 	{
-		va_arg(arg, void);
+		ft_lohex(va_arg(arg, unsigned int));
 	}
 	if (c == 'X')
 	{
-		va_arg(arg, void);
+		va_arg(arg, unsigned int);
 	}
 	return (0);
 }

@@ -1,44 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printftest.c                                       :+:      :+:    :+:   */
+/*   ft_binary.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: michen <michen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/05 18:47:52 by michen            #+#    #+#             */
-/*   Updated: 2023/12/14 17:35:27 by michen           ###   ########.fr       */
+/*   Created: 2023/12/13 19:40:58 by michen            #+#    #+#             */
+/*   Updated: 2023/12/13 21:39:46 by michen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/libft.h"
 #include "ft_printf.h"
 
-int	ft_printf(const char *str, ...)
+char	*ft_binary(int n, char *rt)
 {
-	int		i;
-	va_list	arg;
-
-	// int		countarg;
-	va_start(arg, str);
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] == '%')
-			ft_id(str[++i], arg);
-		else
-			ft_putchar_fd(str[i], 1);
-		i++;
-	}
-	va_end(arg);
-	return (0); // nbr de caractere print
+	if (n)
 }
-
-int	main(void)
+int	main(int argc, char *argv[])
 {
-	unsigned int	t;
-	int				b;
-
-	t = 111111;
-	b = printf("hello les gens %x basjkjhasd", t);
-	printf("%d", b);
+	return (0);
 }

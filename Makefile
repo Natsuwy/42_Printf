@@ -6,7 +6,7 @@ INCLUDE = -I . -I libft
 
 NAME = libftprintf.a
 
-SOURCES = ft_char.c ft_deci.c ft_inter.c ft_lohex.c \
+SOURCES = ft_inter.c ft_hex.c \
 	ft_ptrhex.c ft_string.c ft_udeci.c ft_uphex.c id.c printftest.c
 
 OBJ = $(SOURCES:.c=.o)
@@ -31,3 +31,9 @@ fclean : clean
 
 re : fclean all
 	make re -C libft/
+
+reload :
+	make all
+	make clean
+	cc -Wall -Wextra -Wall printftest.c libftprintf.a
+	./a.out

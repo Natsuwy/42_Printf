@@ -6,7 +6,7 @@
 /*   By: michen <michen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 18:47:52 by michen            #+#    #+#             */
-/*   Updated: 2023/12/14 17:35:27 by michen           ###   ########.fr       */
+/*   Updated: 2024/01/02 19:15:54 by michen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_printf(const char *str, ...)
 		i++;
 	}
 	va_end(arg);
-	return (0); // nbr de caractere print
+	return (i); // nbr de caractere print
 }
 
 int	main(void)
@@ -38,7 +38,7 @@ int	main(void)
 	unsigned int	t;
 	int				b;
 
-	t = 111111;
-	b = printf("hello les gens %x basjkjhasd", t);
+	t = 123;
+	b = ft_printf("hello les gens %x %%char ecrit :", t);
 	printf("%d", b);
 }

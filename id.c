@@ -6,7 +6,7 @@
 /*   By: michen <michen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 20:02:01 by michen            #+#    #+#             */
-/*   Updated: 2023/12/13 17:11:25 by michen           ###   ########.fr       */
+/*   Updated: 2024/01/02 19:09:08 by michen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static int	ft_idbis(char c, va_list arg)
 {
 	if (c == 'd' || c == 'i')
 	{
-		ft_putnbr_fd(va_arg(arg, int), 1);
+		ft_putnbr_fd(va_arg(arg, unsigned int *), 1);
 	}
 	if (c == 'u')
 	{
@@ -28,7 +28,7 @@ static int	ft_idbis(char c, va_list arg)
 	}
 	if (c == 'X')
 	{
-		va_arg(arg, unsigned int);
+		ft_uphex(va_arg(arg, unsigned int));
 	}
 	return (0);
 }

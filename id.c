@@ -6,57 +6,85 @@
 /*   By: michen <michen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 20:02:01 by michen            #+#    #+#             */
-/*   Updated: 2024/01/02 19:09:08 by michen           ###   ########.fr       */
+/*   Updated: 2024/01/03 19:13:25 by michen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+static int	ft_putnbr(int nb)
+{
+	int	i;
+
+	i = 0;
+	if (nb < 0)
+	{
+		if (nb == -2147483648)
+		{
+			i += ft_putstr_fd("-2147483648", 1);
+			return (i);
+		}
+		i += ft_putchar_fd('-', 1);
+		nb *= -1;
+	}
+	if (nb >= 10)
+	{
+		i += ft_putnbr(nb / 10);
+		i += ft_putnbr(nb % 10);
+	}
+	else if (nb >= 0 && nb <= 9)
+		i += ft_putchar_fd(nb + '0', 1);
+	return (i);
+}
 static int	ft_idbis(char c, va_list arg)
 {
+	int	i;
+
+	i = 0;
 	if (c == 'd' || c == 'i')
 	{
-		ft_putnbr_fd(va_arg(arg, unsigned int *), 1);
+		i = ft_putnbr(va_arg(arg, unsigned int));
 	}
-	if (c == 'u')
+	else if (c == 'u')
 	{
 		va_arg(arg, unsigned int);
 	}
-	if (c == 'x')
+	else if (c == 'x')
 	{
-		ft_lohex(va_arg(arg, unsigned int));
+		i = ft_lohex(va_arg(arg, unsigned int));
 	}
-	if (c == 'X')
+	else if (c == 'X')
 	{
-		ft_uphex(va_arg(arg, unsigned int));
+		i = ft_uphex(va_arg(arg, unsigned int));
 	}
-	return (0);
+	return (i);
 }
 
 int	ft_id(char c, va_list arg)
 {
 	char	car;
+	int		i;
 
 	if (!c)
 		return (0);
 	if (c == 'c')
 	{
 		car = va_arg(arg, int);
-		ft_putchar_fd(car, 1);
+		i = ft_putchar_fd(car, 1);
 	}
-	if (c == 's')
-		ft_putstr_fd(va_arg(arg, char *), 1);
-	if (c == 'p')
+	else if (c == 's')
+	{
+		i = ft_putstr_fd(va_arg(arg, char *), 1);
+	}
+	else if (c == 'p')
 	{
 		va_arg(arg, void *);
 	}
-	if (c == '%')
+	else if (c == '%')
 	{
-		write(1, &c, 1);
+		i = write(1, &c, 1);
 	}
 	else
-	{
-		ft_idbis(c, arg);
-	}
-	return (0);
+		i = ft_idbis(c, arg);
+	return (i);
 }

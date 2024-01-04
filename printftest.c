@@ -6,7 +6,7 @@
 /*   By: michen <michen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 18:47:52 by michen            #+#    #+#             */
-/*   Updated: 2024/01/04 20:49:58 by michen           ###   ########.fr       */
+/*   Updated: 2024/01/04 20:55:02 by michen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int	ft_printf(const char *str, ...)
 	int		function_chars;
 	va_list	arg;
 
-	// int		countarg;
 	va_start(arg, str);
 	function_chars = 0;
 	i = 0;
@@ -35,7 +34,7 @@ int	ft_printf(const char *str, ...)
 		i++;
 	}
 	va_end(arg);
-	return (function_chars); // nbr de caractere print
+	return (function_chars);
 }
 
 // int	main(void)

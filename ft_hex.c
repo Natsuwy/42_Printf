@@ -6,7 +6,7 @@
 /*   By: michen <michen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 22:05:37 by michen            #+#    #+#             */
-/*   Updated: 2024/01/02 17:50:09 by michen           ###   ########.fr       */
+/*   Updated: 2024/01/04 20:54:16 by michen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,11 @@ int	ft_lohex(unsigned int n)
 	}
 	return (i);
 }
+
 int	ft_uphex(unsigned int n)
 {
-	int i;
-	char *hex;
+	int		i;
+	char	*hex;
 
 	i = 0;
 	hex = "0123456789ABCDEF";

@@ -6,7 +6,7 @@
 /*   By: michen <michen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 20:02:01 by michen            #+#    #+#             */
-/*   Updated: 2024/01/04 20:47:16 by michen           ###   ########.fr       */
+/*   Updated: 2024/01/04 20:55:21 by michen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ static int	ft_putnbr(int nb)
 		i += ft_putchar_fd(nb + '0', 1);
 	return (i);
 }
+
 static unsigned int	ft_putnbr_unsigned(unsigned int nb)
 {
 	unsigned int	i;
@@ -50,6 +51,7 @@ static unsigned int	ft_putnbr_unsigned(unsigned int nb)
 		i += ft_putchar_fd(nb + '0', 1);
 	return (i);
 }
+
 static int	ft_idbis(char c, va_list arg)
 {
 	int	i;

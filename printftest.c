@@ -6,7 +6,7 @@
 /*   By: michen <michen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 18:47:52 by michen            #+#    #+#             */
-/*   Updated: 2024/01/03 17:58:10 by michen           ###   ########.fr       */
+/*   Updated: 2024/01/04 20:49:58 by michen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,15 +38,22 @@ int	ft_printf(const char *str, ...)
 	return (function_chars); // nbr de caractere print
 }
 
-int	main(void)
-{
-	char	t;
-	int		b;
-	int		c;
+// int	main(void)
+//{
+//	int	b;
+//	int	c;
 
-	t = 'w';
-	b = printf("%d", t);
-	printf("%d\n", b);
-	c = ft_printf("%d", t);
-	printf("%d", c);
-}
+//	// void	*t;
+//	c = 123;
+//	// t = 122;
+//	/* TESTS DES % */
+//	c = ft_printf("U:%u\n", -100);
+//	b = printf("U:%u\n", -100);
+//	// printf("LU:%lu\n", &c);
+//	// b = printf("true:%p\n", &c);
+//	// c = ft_printf("mine:%p\n", &c);
+//	// c = ft_printf("Ul:%u\n", 100);
+//	/* AFFICHAGE DES RETURN DU PRINTF */
+//	printf("true:%d\n", b);
+//	printf("mine:%d\n", c);
+//}

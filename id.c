@@ -6,7 +6,7 @@
 /*   By: michen <michen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 20:02:01 by michen            #+#    #+#             */
-/*   Updated: 2024/01/04 20:55:21 by michen           ###   ########.fr       */
+/*   Updated: 2024/01/04 21:13:51 by michen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,8 +73,6 @@ int	ft_id(char c, va_list arg)
 	char	car;
 	int		i;
 
-	if (!c)
-		return (0);
 	if (c == 'c')
 	{
 		car = va_arg(arg, int);

@@ -6,7 +6,7 @@
 /*   By: michen <michen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 22:05:43 by michen            #+#    #+#             */
-/*   Updated: 2024/01/04 20:30:41 by michen           ###   ########.fr       */
+/*   Updated: 2024/01/04 21:10:28 by michen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ int	ft_ptrhex(unsigned long deci_nbr)
 {
 	int	i;
 
+	if (deci_nbr == 0)
+		return (ft_putstr_fd("(nil)", 1));
 	i = ft_putstr_fd("0x", 1);
 	i += ft_hex_ul(deci_nbr);
 	return (i);

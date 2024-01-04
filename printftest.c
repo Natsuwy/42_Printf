@@ -6,7 +6,7 @@
 /*   By: michen <michen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 18:47:52 by michen            #+#    #+#             */
-/*   Updated: 2024/01/04 20:55:02 by michen           ###   ########.fr       */
+/*   Updated: 2024/01/04 21:20:41 by michen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ int	ft_printf(const char *str, ...)
 	va_start(arg, str);
 	function_chars = 0;
 	i = 0;
+	if (!str)
+		return (-1);
 	while (str[i])
 	{
 		if (str[i] == '%')

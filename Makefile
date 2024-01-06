@@ -35,5 +35,5 @@ re : fclean all
 reload :
 	make all
 	#make clean
-	cc -Wall -Wextra -Wall printftest.c libftprintf.a
+	cc -Wall -Wextra -Werror printftest.c libftprintf.a
 	./a.out

@@ -6,8 +6,8 @@ INCLUDE = -I . -I libft
 
 NAME = libftprintf.a
 
-SOURCES = ft_inter.c ft_hex.c \
-	ft_ptrhex.c ft_string.c ft_udeci.c ft_uphex.c id.c printftest.c
+SOURCES = ft_hex.c \
+	ft_ptrhex.c id.c printftest.c
 
 OBJ = $(SOURCES:.c=.o)
 
